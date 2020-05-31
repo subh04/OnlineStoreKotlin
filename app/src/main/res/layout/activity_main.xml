@@ -22,7 +22,7 @@
         android:hint="Enter email"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:id="@+id/edtLoginEmail"/>
+        android:id="@+id/edtLoginEmail_main"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:drawableRight="@drawable/lock"
         android:hint="Enter password"
         android:inputType="textPassword"
-        android:id="@+id/edtLoginPassword"/>
+        android:id="@+id/edtLoginPassword_main"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 package com.example.onlinestorekotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -36,10 +37,13 @@ class SignUpActivity : AppCompatActivity() {
 
 
                     }else{
-                        val dialogueBuilder=AlertDialog.Builder(this)
-                        dialogueBuilder.setTitle("Congratulations")
-                        dialogueBuilder.setMessage(response)
-                        dialogueBuilder.create().show()
+//                        val dialogueBuilder=AlertDialog.Builder(this)
+//                        dialogueBuilder.setTitle("Congratulations")
+//                        dialogueBuilder.setMessage(response)
+//                        dialogueBuilder.create().show()
+                        Toast.makeText(this@SignUpActivity,response,Toast.LENGTH_SHORT).show()
+                        val homeIntent=Intent(this@SignUpActivity,HomeScreen::class.java)
+                        startActivity(homeIntent)
 
                     }
 
@@ -64,6 +68,9 @@ class SignUpActivity : AppCompatActivity() {
                 dialogueBuilder.setMessage("Password Mismatch")
                 dialogueBuilder.create().show()
             }
+        }
+        btnSignUp_Login.setOnClickListener {
+            finish()
         }
     }
 }
