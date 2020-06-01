@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
         main_btnLogin.setOnClickListener {
             //http://192.168.2.102/OnlineStoreApp/login_app_user.php
-            val loginURL="http://192.168.2.102/OnlineStoreApp/login_app_user.php?email="+
+            val loginURL="http://192.168.0.6/OnlineStoreApp/login_app_user.php?email="+
                     edtLoginEmail_main.text.toString()+
                     "&pass="+edtLoginPassword_main.text.toString()
             val requestQ=Volley.newRequestQueue(this@MainActivity)
@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                 if (response.equals("user does exist")){
 
                     //Toast.makeText(this@MainActivity,response,Toast.LENGTH_SHORT).show()
+                    Person.email=edtLoginEmail_main.text.toString()
                     val homeIntent=Intent(this@MainActivity,HomeScreen::class.java)
                     startActivity(homeIntent)
 
