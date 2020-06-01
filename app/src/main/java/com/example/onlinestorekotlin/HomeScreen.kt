@@ -1,5 +1,6 @@
 package com.example.onlinestorekotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -27,7 +28,7 @@ class HomeScreen : AppCompatActivity() {
                 brandsList.add(response.getJSONObject(jsonObject).getString("brand"))
 
             }
-            var brandsListAdapter=ArrayAdapter(this@HomeScreen,android.R.layout.simple_list_item_1,brandsList)
+            var brandsListAdapter=ArrayAdapter(this@HomeScreen,R.layout.brand_item_textview,brandsList)//our own custom layout
             brandsListView.adapter=brandsListAdapter
 
 
@@ -46,6 +47,20 @@ class HomeScreen : AppCompatActivity() {
         })
 
         requestQ.add(jsonArrReq)
+
+        //setting onClickListener for each listViewItems
+
+        brandsListView.setOnItemClickListener { parent, view, position, id ->
+
+            var tappedBrand=brandsList.get(position)
+            val intent=Intent(this@HomeScreen,FetchEProductsActivity::class.java)
+            intent.putExtra("BRAND",tappedBrand) //BRAND IS KEY
+            startActivity(intent)
+
+
+
+
+        }
 
 
 
