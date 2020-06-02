@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FetchEProductsActivity"></activity>
+        <activity android:name=".CartProductsActivity"></activity>
+        <activity android:name=".FetchEProductsActivity" />
         <activity android:name=".HomeScreen" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">

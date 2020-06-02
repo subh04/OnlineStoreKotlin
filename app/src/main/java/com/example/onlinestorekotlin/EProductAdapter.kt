@@ -1,5 +1,6 @@
 package com.example.onlinestorekotlin
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -40,6 +41,18 @@ class EProductAdapter(var context: Context,var arrayList:ArrayList<EProduct>): R
             var picURL="http://192.168.0.6/OnlineStoreApp/osimages/"
             picURL=picURL.replace(" ","%20")
             Picasso.get().load(picURL + picName).into(itemView.imgProduct)
+            itemView.imgAdd.setOnClickListener {
+
+
+                Person.addToCartProductID=id
+
+                //creating a dialogue fragment
+                var amountFragment=AmountFragment()
+                var fragmentManager=(itemView.context as Activity).fragmentManager
+                amountFragment.show(fragmentManager,"TAG")
+
+
+            }
 
 
 
