@@ -19,7 +19,7 @@ class FetchEProductsActivity : AppCompatActivity() {
         val selectedBrand:String=intent.getStringExtra("BRAND")//here we get the value of the selected brand
         txtBrandName.text="Showing Products of "+selectedBrand
         var productsList=ArrayList<EProduct>()
-        val productsURL="http://192.168.0.6/OnlineStoreApp/fetch_eproducts.php?brand="+selectedBrand
+        val productsURL="http://192.168.0.3/OnlineStoreApp/fetch_eproducts.php?brand="+selectedBrand
         val requestQ=Volley.newRequestQueue(this@FetchEProductsActivity)
         val jsonArrReq=JsonArrayRequest(Request.Method.GET,productsURL,null,Response.Listener { response ->
 

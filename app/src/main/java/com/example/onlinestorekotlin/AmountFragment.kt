@@ -31,7 +31,7 @@ class AmountFragment : android.app.DialogFragment() {
         btnAddToCart.setOnClickListener {
 
             //http://192.168.0.6/OnlineStoreApp/insert_temporary_order.php
-            var place_temporary_order_URL="http://192.168.0.6/OnlineStoreApp/insert_temporary_order.php?email="+
+            var place_temporary_order_URL="http://192.168.0.3/OnlineStoreApp/insert_temporary_order.php?email="+
                     Person.email+"&product_id="+
                     Person.addToCartProductID+"&amount="+
                     edtEnterAmount.text.toString()

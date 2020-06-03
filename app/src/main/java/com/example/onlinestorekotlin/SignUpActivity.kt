@@ -20,7 +20,7 @@ class SignUpActivity : AppCompatActivity() {
             if(signUpUserPassword1.text.toString().equals(signUpUserPasswordConfirm.text.toString())){
 
                 //Registration process http://192.168.2.102/OnlineStoreApp/join_new_users.php
-                val signUpURL="http://192.168.0.6/OnlineStoreApp/join_new_users.php?email="+
+                val signUpURL="http://192.168.0.3/OnlineStoreApp/join_new_users.php?email="+
                         signUpEmail.text.toString()+
                         "&username="+signUpUserName.text.toString()+
                         "&pass="+signUpUserPasswordConfirm.text.toString()

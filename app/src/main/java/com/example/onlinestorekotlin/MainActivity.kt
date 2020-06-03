@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
         main_btnLogin.setOnClickListener {
             //http://192.168.2.102/OnlineStoreApp/login_app_user.php
-            val loginURL="http://192.168.0.6/OnlineStoreApp/login_app_user.php?email="+
+            val loginURL="http://192.168.0.3/OnlineStoreApp/login_app_user.php?email="+
                     edtLoginEmail_main.text.toString()+
                     "&pass="+edtLoginPassword_main.text.toString()
             val requestQ=Volley.newRequestQueue(this@MainActivity)

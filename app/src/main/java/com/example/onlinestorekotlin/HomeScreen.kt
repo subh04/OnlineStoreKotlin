@@ -19,7 +19,7 @@ class HomeScreen : AppCompatActivity() {
 
         //http://192.168.0.6/OnlineStoreApp/fetch_brands.php
 
-        var brandsURL="http://192.168.0.6/OnlineStoreApp/fetch_brands.php"
+        var brandsURL="http://192.168.0.3/OnlineStoreApp/fetch_brands.php"
         var brandsList=ArrayList<String>()
         var requestQ=Volley.newRequestQueue(this@HomeScreen)
         var jsonArrReq= JsonArrayRequest(Request.Method.GET,brandsURL,null,Response.Listener { response ->
