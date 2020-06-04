@@ -89,7 +89,7 @@ class CartProductsActivity : AppCompatActivity() {
             var stringRequest=StringRequest(Request.Method.GET,verifyOrderURL,Response.Listener { response ->
 
                 var intent=Intent(this,FinalizeShopping::class.java)
-                Toast.makeText(this,response,Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"your invoice number: "+response,Toast.LENGTH_SHORT).show()
                 intent.putExtra("LATEST_INVOICE_NUMBER",response)
                 startActivity(intent)
 
